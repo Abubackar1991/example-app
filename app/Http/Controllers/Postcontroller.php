@@ -49,9 +49,9 @@ class Postcontroller extends Controller
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(string $id)
+    public function edit($id)
     {
-        //
+        return $this->postService->edit($id);
     }
 
     /**
@@ -66,8 +66,8 @@ class Postcontroller extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Post $post)
+    public function destroy(Post $post,$id)
     {
-        return $this->postService->destroy($post);
+        return $this->postService->destroy($post,$id);
     }
 }
